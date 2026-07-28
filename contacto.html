@@ -646,6 +646,12 @@
                     </div>
                 </div>
 
+                <!-- Campo: Número de Cédula -->
+                <div class="form-field" style="margin-bottom: 22px;">
+                    <label for="cedula">Número de Cédula</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Ej. 1724276496" required>
+                </div>
+
                 <!-- Campo dinámico para especificar otro tratamiento (oculto por defecto) -->
                 <div class="form-field" id="other-treatment-container" style="display: none; margin-top: -5px; margin-bottom: 22px;">
                     <label for="other-treatment">Especifica el tratamiento o motivo de consulta</label>
@@ -675,6 +681,7 @@
         <input type="hidden" name="entry.1272045361" id="gf-name">
         <input type="hidden" name="entry.1737406584" id="gf-phone">
         <input type="hidden" name="entry.1009305705" id="gf-email">
+        <input type="hidden" name="entry.411261557" id="gf-cedula">
     </form>
 
     <!-- Puente de Sugerencias -->
@@ -922,6 +929,7 @@
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
+            const cedula = document.getElementById('cedula').value;
             
             let selectedTreatment = treatmentSelect.options[treatmentSelect.selectedIndex].text;
             if (treatmentSelect.value === 'otro') {
@@ -934,10 +942,11 @@
             document.getElementById('gf-name').value = name;
             document.getElementById('gf-phone').value = phone;
             document.getElementById('gf-email').value = email;
+            document.getElementById('gf-cedula').value = cedula;
             document.getElementById('google-citas-bridge').submit();
 
-            // Redirigir inmediatamente a WhatsApp
-            const text = `Hola Vitalife 360, deseo agendar una valoración odontológica:\n\n*Nombre:* ${name}\n*Teléfono:* ${phone}\n*Correo:* ${email}\n*Tratamiento:* ${selectedTreatment}\n*Mensaje:* ${msg}`;
+            // Redirigir inmediatamente a WhatsApp (incluye número de cédula)
+            const text = `Hola Vitalife 360, deseo agendar una valoración odontológica:\n\n*Nombre:* ${name}\n*Cédula:* ${cedula}\n*Teléfono:* ${phone}\n*Correo:* ${email}\n*Tratamiento:* ${selectedTreatment}\n*Mensaje:* ${msg}`;
             const encodedText = encodeURIComponent(text);
             window.open(`https://wa.me/593983906801?text=${encodedText}`, '_blank');
         });
