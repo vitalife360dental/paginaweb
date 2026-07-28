@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oenvia | Cuidado Dental Diseñado Para Mayor Comodidad</title>
+    <meta name="description" content="Descubre tratamientos a medida, diagnósticos de vanguardia y un equipo dedicado a tu bienestar a largo plazo en oenvia.">
+    <!-- Google Fonts: Outfit for clean modern geometric look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=64">
+    <!-- Script defer para animaciones dinámicas de scroll -->
+    <script src="main.js?v=64" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo_horizontal.png" alt="Vitalife 360 Dental Studio" class="logo-img">
+        </div>
+        <nav class="nav">
+            <a href="#inicio" class="nav-link active">INICIO</a>
+            <a href="#servicios" class="nav-link">SERVICIOS</a>
+            <a href="#equipo" class="nav-link">NUESTRO EQUIPO</a>
+            <a href="#testimonios" class="nav-link">TESTIMONIOS</a>
+            <a href="#ubicacion" class="nav-link">UBICACIÓN</a>
+        </nav>
+        <a href="contacto.html" class="btn btn-outline" id="btn-agenda">
+            CONTÁCTANOS
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+        </a>
+    </header>
+
+    <main class="hero-container" id="inicio">
+        <!-- Fondo interactivo con glow radial turquesa -->
+        <div class="glow-bg"></div>
+
+        <!-- Capa de Video (Base central fija que viaja al segundo bloque) -->
+        <div class="video-container">
+            <video class="tooth-video" autoplay loop muted playsinline>
+                <source src="Brush_painting_tooth_with_paint_202607090001.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+
+        <!-- Capa del Contenido (Superpuesta al video) -->
+        <div class="hero-content">
+            <!-- Columna Izquierda -->
+            <div class="hero-left">
+                <!-- Grid de Estadísticas -->
+                <div class="stats-grid animate-fade-in" style="animation-delay: 0.2s;">
+                    <div class="stat-item">
+                        <span class="stat-number">+3K</span>
+                        <span class="stat-label">SONRISAS<br>FELICES</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+6K</span>
+                        <span class="stat-label">AÑOS DE<br>EXPERIENCIA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">+850</span>
+                        <span class="stat-label">RESEÑAS DE<br>PACIENTES</span>
+                    </div>
+                </div>
+
+                <!-- Descripción inferior izquierda -->
+                <p class="hero-desc-left animate-fade-in" style="animation-delay: 0.4s;">
+                    DESDE REVISIONES DE RUTINA HASTA RESTAURACIONES ESPECIALIZADAS, CREAMOS SONRISAS SALUDABLES CADA DÍA.
+                </p>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="hero-right">
+                <!-- Descripción superior derecha -->
+                <div class="hero-desc-right-container animate-fade-in" style="animation-delay: 0.3s;">
+                    <p class="hero-desc-right">
+                        DESCUBRE TRATAMIENTOS A MEDIDA, DIAGNÓSTICOS DE VANGUARDIA Y UN EQUIPO DEDICADO A TU BIENESTAR A LARGO PLAZO.
+                    </p>
+                </div>
+
+                <!-- Botón Explora -->
+                <div class="explore-btn-container animate-fade-in" style="animation-delay: 0.5s;">
+                    <a href="#servicios" class="btn btn-solid" id="btn-explore">
+                        EXPLORA NUESTROS SERVICIOS
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Título Principal Inferior Derecho -->
+                <h1 class="hero-title-right animate-fade-in" style="animation-delay: 0.6s;">
+                    CUIDADO DENTAL<br>DISEÑADO PARA<br>MAYOR COMODIDAD
+                </h1>
+            </div>
+        </div>
+    </main>
+
+    <!-- Segundo Bloque: Sección Diseño de Sonrisa (Enfoque limpio y editorial) -->
+    <section class="services-section" id="servicios">
+        <!-- Contenedor del segundo video con zoom de entrada en pantalla completa/fondo -->
+        <div class="second-video-wrapper">
+            <video class="second-tooth-video" autoplay loop muted playsinline>
+                <source src="video_202607091412.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+
+        <div class="services-container">
+            <div class="services-left-anchor">
+                <div class="interactive-smile-svg-wrapper">
+                    <!-- Video corto tipo GIF (IMG_6481.mov) para diseño de sonrisa -->
+                    <video autoplay loop muted playsinline class="services-placeholder-img" style="width: 100%; min-height: 280px; display: block; border-radius: 16px; border: 1px solid #1a1a1a; background: #000; object-fit: cover;">
+                        <source src="IMG_6481_opt.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Contenido de Servicios (Estilo Editorial con la tipografía del Hero) -->
+            <div class="services-right-content">
+                <span class="section-tag-muted animate-on-scroll">CLÍNICA SOLVENTE • RESPALDO PROFESIONAL • MÁXIMA GARANTÍA</span>
+                
+                <div class="service-title-flex animate-on-scroll" style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; flex-wrap: nowrap;">
+                    <h2 class="services-title" style="margin-bottom: 0;">DISEÑO DE SONRISA</h2>
+                    <div class="micro-svg-service-icon smile-icon">
+                        <svg class="interactive-smile-svg" viewBox="30 30 240 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                            <defs>
+                                <linearGradient id="smile-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00b3b3" />
+                                    <stop offset="100%" stop-color="#D7C19B" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Guías de calibración de diseño (Ejes de simetría) -->
+                            <g id="smile-axes" class="smile-part">
+                                <line id="smile-axis-h" x1="20" y1="100" x2="280" y2="100" stroke="#00b3b3" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5" />
+                                <line id="smile-axis-v" x1="150" y1="20" x2="150" y2="180" stroke="#00b3b3" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5" />
+                                <circle cx="150" cy="100" r="8" stroke="#00b3b3" stroke-width="1.5" opacity="0.6" />
+                            </g>
+
+                            <!-- Enfoques de esquinas (Crop marks de escáner facial) -->
+                            <g id="smile-corners" class="smile-part">
+                                <!-- Superior Izquierda -->
+                                <path id="smile-corner-tl" d="M 40,40 H 55 M 40,40 V 55" stroke="#D7C19B" stroke-width="2" stroke-linecap="round" />
+                                <!-- Superior Derecha -->
+                                <path id="smile-corner-tr" d="M 260,40 H 245 M 260,40 V 55" stroke="#D7C19B" stroke-width="2" stroke-linecap="round" />
+                                <!-- Inferior Izquierda -->
+                                <path id="smile-corner-bl" d="M 40,160 H 55 M 40,160 V 145" stroke="#D7C19B" stroke-width="2" stroke-linecap="round" />
+                                <!-- Inferior Derecha -->
+                                <path id="smile-corner-br" d="M 260,160 H 245 M 260,160 V 145" stroke="#D7C19B" stroke-width="2" stroke-linecap="round" />
+                            </g>
+
+                            <!-- Curva guía de proporción estética de la sonrisa (Arco estético) -->
+                            <path id="smile-arc" d="M 60,135 Q 150,175 240,135" stroke="#00b3b3" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 4" opacity="0.7" />
+
+                            <!-- Línea de escaneo láser horizontal (Barrido de calibración) -->
+                            <line id="smile-scan-line" x1="30" y1="40" x2="270" y2="40" stroke="#00b3b3" stroke-width="2.5" stroke-linecap="round" opacity="0" />
+
+                            <!-- Silueta de la Sonrisa Premium (Labios y Dientes estilizados) -->
+                            <g id="smile-contour-group" class="smile-part" style="transform-origin: 150px 100px;">
+                                <!-- Silueta de dientes superiores -->
+                                <path id="smile-teeth-contour" d="M 95,95 Q 120,98 150,98 Q 180,98 205,95 Q 195,115 150,118 Q 105,115 95,95 Z" stroke="url(#smile-grad)" stroke-width="2.5" stroke-linejoin="round" />
+                                <!-- Separadores de dientes minimalistas -->
+                                <path id="smile-teeth-dividers" d="M 120,97 V 108 M 135,98 V 113 M 150,98 V 115 M 165,98 V 113 M 180,97 V 108" stroke="url(#smile-grad)" stroke-width="1.5" opacity="0.8" />
+                                <!-- Contorno labio superior -->
+                                <path id="smile-lip-upper" d="M 80,95 C 100,85 130,85 150,93 C 170,85 200,85 220,95 C 190,105 170,105 150,100 C 130,105 110,105 80,95 Z" stroke="#D7C19B" stroke-width="2" stroke-linejoin="round" />
+                                <!-- Contorno labio inferior -->
+                                <path id="smile-lip-lower" d="M 80,95 C 110,135 190,135 220,95 C 185,120 115,120 80,95 Z" stroke="#D7C19B" stroke-width="2" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                
+                <p class="services-main-paragraph animate-on-scroll">
+                    CADA SONRISA ES UNA OBRA DE ARTE ÚNICA. MEDIANTE ANÁLISIS FACIAL DIGITAL DE ÚLTIMA GENERACIÓN Y TECNOLOGÍA DE VANGUARDIA, DISEÑAMOS TRATAMIENTOS A TU MEDIDA. SOMOS UNA CLÍNICA DE ALTA SOLVENCIA Y TRAYECTORIA QUE TE BRINDA LA CONFIANZA Y LA GARANTÍA DE UN RESULTADO EXCEPCIONAL.
+                </p>
+
+                <!-- Pequeños pilares informativos limpios sin tarjetas -->
+                <div class="editorial-pillars">
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <span class="pillar-title">CONFIANZA CLÍNICA</span>
+                        <p class="pillar-text">DIAGNÓSTICOS DE VANGUARDIA QUE RESPALDAN CADA PASO DE TU TRATAMIENTO CON ABSOLUTA TRANSPARENCIA.</p>
+                    </div>
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <span class="pillar-title">GARANTÍA INTEGRAL</span>
+                        <p class="pillar-text">RESPALDAMOS TU BIENESTAR A LARGO PLAZO CON MATERIALES BIOCOMPATIBLES DE LA MÁS ALTA CALIDAD.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-cta animate-on-scroll" style="transition-delay: 0.3s;">
+                    <a href="#contacto" class="btn btn-outline">
+                        SABER MÁS SOBRE EL PROCESO
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tercer Bloque: Sección Ortodoncia (Texto a la izquierda, espacio a la derecha) -->
+    <section class="services-section" id="ortodoncia" style="border-top: 1px solid #111;">
+        <!-- Contenedor del tercer video con zoom de entrada en pantalla completa/fondo -->
+        <div class="third-video-wrapper">
+            <video class="third-tooth-video" autoplay loop muted playsinline>
+                <source src="White_paint_drops_moving_sideways_202607091753.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+
+        <div class="services-container services-container-swapped">
+            <!-- Contenido de Servicios (Lado Izquierdo) -->
+            <div class="services-right-content">
+                <span class="section-tag-muted animate-on-scroll">ALINEACIÓN PERFECTA • TECNOLOGÍA INVISIBLE • ESTÉTICA DENTAL</span>
+                
+                <div class="service-title-flex animate-on-scroll" style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; flex-wrap: nowrap;">
+                    <h2 class="services-title" style="margin-bottom: 0;">ORTODONCIA</h2>
+                    <div class="micro-svg-service-icon ortho-icon">
+                        <svg class="interactive-ortho-svg" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                            <defs>
+                                <linearGradient id="ortho-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00b3b3" />
+                                    <stop offset="100%" stop-color="#D7C19B" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Diente Izquierdo (con su bracket) -->
+                            <g id="ortho-tooth-left" class="ortho-part" style="transform-origin: 80px 110px;">
+                                <!-- Silueta diente -->
+                                <path d="M55 110 C55 85 60 70 80 70 C100 70 105 85 105 110 C105 130 95 145 80 145 C65 145 55 130 55 110 Z" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round" />
+                                <!-- Bracket metálico -->
+                                <rect x="72" y="102" width="16" height="16" rx="2" stroke="#D7C19B" stroke-width="2.5" fill="#080808" />
+                                <path d="M72 110 H88 M80 102 V118" stroke="#D7C19B" stroke-width="1.5" />
+                            </g>
+                            <!-- Diente Derecho (con su bracket) -->
+                            <g id="ortho-tooth-right" class="ortho-part" style="transform-origin: 220px 110px;">
+                                <!-- Silueta diente -->
+                                <path d="M195 110 C195 85 200 70 220 70 C240 70 245 85 245 110 C245 130 235 145 220 145 C205 145 195 130 195 110 Z" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round" />
+                                <!-- Bracket metálico -->
+                                <rect x="212" y="102" width="16" height="16" rx="2" stroke="#D7C19B" stroke-width="2.5" fill="#080808" />
+                                <path d="M212 110 H228 M220 102 V118" stroke="#D7C19B" stroke-width="1.5" />
+                            </g>
+                            <!-- Diente Central (con su bracket) -->
+                            <g id="ortho-tooth-center" class="ortho-part" style="transform-origin: 150px 110px;">
+                                <!-- Silueta diente -->
+                                <path d="M125 110 C125 85 130 70 150 70 C170 70 175 85 175 110 C175 130 165 145 150 145 C135 145 125 130 125 110 Z" stroke="#e0e0e0" stroke-width="2" stroke-linecap="round" />
+                                <!-- Bracket metálico -->
+                                <rect x="142" y="102" width="16" height="16" rx="2" stroke="#D7C19B" stroke-width="2.5" fill="#080808" />
+                                <path d="M142 110 H158 M150 102 V118" stroke="#D7C19B" stroke-width="1.5" />
+                            </g>
+                            <!-- Alambre de arco metálico horizontal (Une los brackets) -->
+                            <path id="ortho-wire" d="M 40,110 Q 150,145 260,110" stroke="url(#ortho-grad)" stroke-width="3" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                </div>
+                
+                <p class="services-main-paragraph animate-on-scroll">
+                    TRANSFORMAMOS TU SONRISA MEDIANTE SISTEMAS DE ORTODONCIA DE ÚLTIMA GENERACIÓN. DESDE BRACKETS AUTOLIGABLES HASTA ALINEADORES INVISIBLES PREMIUM, DISEÑAMOS TU TRATAMIENTO CON PRECISIÓN DIGITAL PARA BRINDARTE LA MÁXIMA COMODIDAD Y UN RESULTADO ESTABLE A LARGO PLAZO.
+                </p>
+
+                <!-- Pequeños pilares informativos limpios sin tarjetas -->
+                <div class="editorial-pillars">
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <span class="pillar-title">DISEÑO DIGITAL</span>
+                        <p class="pillar-text">PLANIFICACIÓN TRIDIMENSIONAL DEL MOVIMIENTO DENTAL PARA GARANTIZAR RESULTADOS PREDECIBLES Y TIEMPOS DE TRATAMIENTO OPTIMIZADOS.</p>
+                    </div>
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <span class="pillar-title">SISTEMAS INVISIBLES</span>
+                        <p class="pillar-text">ALINEADORES ESTÉTICOS REMOVIBLES DE ÚLTIMA TECNOLOGÍA QUE SE ADAPTAN DE FORMA PRÁCTICA A TU RITMO DE VIDA DIARIO.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-cta animate-on-scroll" style="transition-delay: 0.3s;">
+                    <a href="#contacto" class="btn btn-outline">
+                        SABER MÁS SOBRE EL TRATAMIENTO
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Espacio receptor para el futuro video (Icono Interactivo de Ortodoncia) -->
+            <div class="services-right-anchor">
+                <div class="interactive-ortho-svg-wrapper">
+                    <video autoplay loop muted playsinline class="services-placeholder-img" style="width: 100%; min-height: 280px; display: block; border-radius: 16px; border: 1px solid #1a1a1a; background: #000; object-fit: cover;">
+                        <source src="Dentist_places_bracket_on_tooth_cropped.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuarto Bloque: Sección Implantes Dentales (Texto a la derecha, espacio a la izquierda) -->
+    <section class="services-section" id="implantes" style="border-top: 1px solid #111;">
+        <!-- Contenedor del cuarto video/imagen (Imagen de fondo con zoom de entrada) -->
+        <div class="fourth-video-wrapper">
+            <img src="Vitalife360_DENTAL_web_banner_2K_202607092020.jpeg" alt="Implantes dentales premium" class="fourth-tooth-image">
+        </div>
+
+        <div class="services-container">
+            <div class="services-left-anchor">
+                <div class="interactive-implant-svg-wrapper">
+                    <!-- Video corto tipo GIF (IMG_3256.mov) para implantes -->
+                    <video autoplay loop muted playsinline class="services-placeholder-img" style="width: 100%; min-height: 280px; display: block; border-radius: 16px; border: 1px solid #1a1a1a; background: #000; object-fit: cover;">
+                        <source src="IMG_3256_opt.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Contenido de Servicios (Lado Derecho) -->
+            <div class="services-right-content">
+                <span class="section-tag-muted animate-on-scroll">RESTAURACIÓN PREMIUM • BIOCOMPATIBILIDAD • ESTABILIDAD DE POR VIDA</span>
+                
+                <div class="service-title-flex animate-on-scroll" style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; flex-wrap: nowrap;">
+                    <h2 class="services-title" style="margin-bottom: 0;">IMPLANTES DENTALES</h2>
+                    <div class="micro-svg-service-icon implant-icon">
+                        <svg class="interactive-implant-svg" viewBox="65 55 70 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                            <defs>
+                                <linearGradient id="implant-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#D7C19B" />
+                                    <stop offset="100%" stop-color="#00b3b3" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Perno/Tornillo (Parte inferior) -->
+                            <g id="implant-screw" class="implant-part">
+                                <path d="M90 190 H110 M85 210 H115 M90 230 H110 M95 250 H105 M100 170 V270" stroke="#00b3b3" stroke-width="2.5" stroke-linecap="round" />
+                                <!-- Rosca del tornillo en hélice/dientes laterales -->
+                                <path d="M85 210 L100 220 L115 210 M87 230 L100 240 L113 230 M92 250 L100 265 L108 250" stroke="#00b3b3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <!-- Pilar/Conector (Parte del medio) -->
+                            <g id="implant-abutment" class="implant-part">
+                                <path d="M80 135 L90 170 H110 L120 135 H80 Z" stroke="url(#implant-grad)" stroke-width="2.5" stroke-linejoin="round" />
+                                <path d="M100 135 V170" stroke="url(#implant-grad)" stroke-width="1.5" />
+                            </g>
+                            <!-- Corona Dental (Parte superior) -->
+                            <g id="implant-crown" class="implant-part">
+                                <path d="M70 120 C70 95 65 60 90 60 C95 60 100 65 100 65 C100 65 105 60 110 60 C135 60 130 95 130 120 C130 130 120 135 100 135 C80 135 70 130 70 120 Z" stroke="#D7C19B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <!-- Detalles internos de esmalte -->
+                                <path d="M90 75 Q100 85 110 75 M100 65 V105" stroke="#D7C19B" stroke-width="1.5" stroke-linecap="round" opacity="0.6" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                
+                <p class="services-main-paragraph animate-on-scroll">
+                    RECUPERA LA FUNCIÓN Y ESTÉTICA NATURAL DE TU DENTADURA CON NUESTROS IMPLANTES DE TITANIO DE ALTA GAMA. MEDIANTE CIRUGÍA GUIADA POR COMPUTADORA Y MATERIALES DE ÚLTIMA GENERACIÓN, OFRECEMOS SOLUCIONES DEFINITIVAS Y SEGURAS QUE SE SIENTEN Y LUCEN EXACTAMENTE COMO TUS DIENTES NATURALES.
+                </p>
+
+                <!-- Pequeños pilares informativos limpios sin tarjetas -->
+                <div class="editorial-pillars">
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <span class="pillar-title">DIAGNÓSTICO 3D</span>
+                        <p class="pillar-text">TOMOGRAFÍA COMPUTARIZADA DE HAZ CÓNICO PARA UNA PLANIFICACIÓN QUIRÚRGICA MILIMÉTRICA Y SEGURA.</p>
+                    </div>
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <span class="pillar-title">MÁXIMA DURABILIDAD</span>
+                        <p class="pillar-text">IMPLANTES BIOCOMPATIBLES CON GARANTÍA DE OSTEODEGRACIÓN Y CORONAS DE CIRCONIO DE ALTA RESISTENCIA.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-cta animate-on-scroll" style="transition-delay: 0.3s;">
+                    <a href="#contacto" class="btn btn-outline">
+                        SABER MÁS SOBRE IMPLANTES
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- Quinto Bloque: Sección Cirugía Bucal (Texto a la izquierda, espacio a la derecha) -->
+    <section class="services-section" id="cirugia-bucal" style="border-top: 1px solid #111;">
+        <!-- Contenedor del quinto video (Video de fondo con zoom de entrada) -->
+        <div class="fifth-video-wrapper">
+            <video class="fifth-tooth-video" autoplay loop muted playsinline>
+                <source src="White_paint_drops_move_sideways_202607151818.mp4" type="video/mp4">
+                Tu navegador no soporta el tag de video.
+            </video>
+        </div>
+
+        <div class="services-container services-container-swapped">
+            <!-- Contenido de Servicios (Lado Izquierdo) -->
+            <div class="services-right-content">
+                <span class="section-tag-muted animate-on-scroll">MÍNIMAMENTE INVASIVA • PRECISIÓN QUIRÚRGICA • RÁPIDA RECUPERACIÓN</span>
+                
+                <div class="service-title-flex animate-on-scroll" style="display: flex; align-items: center; gap: 8px; margin-bottom: 25px; flex-wrap: nowrap;">
+                    <h2 class="services-title" style="margin-bottom: 0;">CIRUGÍA BUCAL</h2>
+                    <div class="micro-svg-service-icon surgery-icon">
+                        <svg class="interactive-surgery-svg" viewBox="30 30 240 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%;">
+                            <defs>
+                                <linearGradient id="surgery-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00b3b3" />
+                                    <stop offset="100%" stop-color="#D7C19B" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Círculos de guía quirúrgica -->
+                            <g id="surgery-rings" style="transform-origin: 150px 100px;">
+                                <circle cx="150" cy="100" r="45" stroke="#00b3b3" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5" />
+                                <circle cx="150" cy="100" r="60" stroke="#D7C19B" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4" />
+                            </g>
+                            <!-- Cruz quirúrgica / Ejes de precisión -->
+                            <g id="surgery-cross">
+                                <line x1="150" y1="30" x2="150" y2="170" stroke="#00b3b3" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.6" />
+                                <line x1="80" y1="100" x2="220" y2="100" stroke="#00b3b3" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.6" />
+                            </g>
+                            <!-- Muela principal -->
+                            <g id="surgery-tooth" style="transform-origin: 150px 100px;">
+                                <path d="M120 100 C120 75 125 60 150 60 C175 60 180 75 180 100 C180 125 170 145 150 145 C130 145 120 125 120 100 Z" stroke="#e0e0e0" stroke-width="2.5" stroke-linecap="round" />
+                                <path d="M140 100 L145 130 M160 100 L155 130" stroke="#00b3b3" stroke-width="1.5" stroke-linecap="round" opacity="0.7" />
+                            </g>
+                            <!-- Target / Mira de Precisión (4 Ticks) -->
+                            <g id="surgery-target-ticks" style="transform-origin: 150px 100px;">
+                                <path d="M150 40 V50 M150 160 V150 M90 100 H100 M210 100 H200" stroke="#D7C19B" stroke-width="2.5" stroke-linecap="round" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                
+                <p class="services-main-paragraph animate-on-scroll">
+                    REALIZAMOS PROCEDIMIENTOS QUIRÚRGICOS DE ALTA COMPLEJIDAD CON TÉCNICAS MÍNIMAMENTE INVASIVAS. DESDE LA EXTRACCIÓN SECTORIZADA DE TERCEROS MOLARES HASTA LA RECONSTRUCCIÓN ÓSEA AVANZADA, NUESTRO ENFOQUE COMBINA MÁXIMA SEGURIDAD CLÍNICA CON UNA RECUPERACIÓN RÁPIDA Y CONFORTABLE.
+                </p>
+
+                <!-- Pequeños pilares informativos limpios sin tarjetas -->
+                <div class="editorial-pillars">
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <span class="pillar-title">EXTRACCIONES GUIADAS</span>
+                        <p class="pillar-text">TERCEROS MOLARES Y PIEZAS RETENIDAS PLANIFICADAS EN 3D CON MÍNIMO TRAUMA TISULAR.</p>
+                    </div>
+                    <div class="pillar-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <span class="pillar-title">INJERTOS ÓSEOS</span>
+                        <p class="pillar-text">REGENERACIÓN ÓSEA GUIADA DE ALTA GAMA PARA LA PREPARACIÓN Y COLOCACIÓN EXITOSA DE IMPLANTES.</p>
+                    </div>
+                </div>
+
+                <div class="editorial-cta animate-on-scroll" style="transition-delay: 0.3s;">
+                    <a href="#contacto" class="btn btn-outline">
+                        SABER MÁS SOBRE CIRUGÍA
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lado Derecho (Video de Cirugía / Bucle silencioso tipo GIF) -->
+            <div class="services-right-anchor">
+                <div class="interactive-surgery-svg-wrapper">
+                    <!-- Video en bucle tipo GIF para cirugía bucal -->
+                    <video autoplay loop muted playsinline class="services-placeholder-img" style="width: 100%; min-height: 280px; display: block; border-radius: 16px; border: 1px solid #1a1a1a; background: #000; object-fit: cover;">
+                        <source src="IMG_5603_opt.mp4" type="video/mp4">
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nuestro Equipo (Diseño de Lujo Editorial - Enfoque Clínico Anónimo por Seguridad) -->
+    <section class="team-section animate-on-scroll" id="equipo" style="border-top: 1px solid #111; position: relative;">
+        <!-- Video de fondo: Pintura blanca fluyendo desde los lados y formando la muela en el centro -->
+        <div class="team-video-wrapper">
+            <video class="team-bg-video" autoplay muted loop playsinline>
+                <source src="White_paint_drops_move_sideways_202607151818.mp4" type="video/mp4">
+            </video>
+            <!-- Overlay oscuro para dar contraste y legibilidad a las tarjetas -->
+            <div class="team-video-overlay"></div>
+        </div>
+
+        <div class="team-header animate-on-scroll">
+            <span class="section-tag-muted">VITALIFE 360 DENTAL STUDIO</span>
+            <h2 class="services-title" style="margin-bottom: 20px;">NUESTRO EQUIPO</h2>
+            <p class="services-main-paragraph" style="max-width: 700px; margin: 0 auto 60px auto; text-align: center;">
+                UN GRUPO MULTIDISCIPLINARIO DE ESPECIALISTAS ALTAMENTE CALIFICADOS QUE TRABAJAN BAJO LOS MÁS ESTRICTOS ESTÁNDARES INTERNACIONALES DE EXCELENCIA.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            <!-- Card 1: Estética Dental (Desliza desde la izquierda) -->
+            <div class="team-card slide-from-left animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="doctor-image-wrapper standard-img-wrapper">
+                    <img src="https://i.ibb.co/DgpcrdxY/IMG-2933.jpg" alt="Vitalife - Estética Dental">
+                </div>
+                <div class="doctor-info" style="margin-top: 20px; text-align: left;">
+                    <span class="doctor-specialty">DISEÑO & ARMONIZACIÓN</span>
+                    <h3 class="doctor-name" style="font-size: 1.1rem; margin-top: 5px;">ESTÉTICA DENTAL</h3>
+                    <p class="doctor-bio" style="font-size: 0.8rem; line-height: 1.5;">Tratamientos enfocados en devolver la armonía, brillo y simetría natural a tu sonrisa.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Ortodoncia (Desliza desde la izquierda) -->
+            <div class="team-card slide-from-left animate-on-scroll" style="transition-delay: 0.3s;">
+                <div class="doctor-image-wrapper standard-img-wrapper">
+                    <img src="7dc9408f-c878-4ba5-8a54-57a6538c1599.JPG" alt="Vitalife - Ortodoncia" style="object-position: center 25%;">
+                </div>
+                <div class="doctor-info" style="margin-top: 20px; text-align: left;">
+                    <span class="doctor-specialty">ALINEACIÓN DE VANGUARDIA</span>
+                    <h3 class="doctor-name" style="font-size: 1.1rem; margin-top: 5px;">ORTODONCIA</h3>
+                    <p class="doctor-bio" style="font-size: 0.8rem; line-height: 1.5;">Alineación de piezas dentales mediante técnicas tradicionales e invisibles modernas.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Endodoncia (Aparece en el centro al formarse la muela) -->
+            <div class="team-card fade-in-center animate-on-scroll" style="transition-delay: 0.5s;">
+                <div class="doctor-image-wrapper standard-img-wrapper">
+                    <img src="32c45541-3e35-4e5a-a052-c929f284c094.JPG_2K_202607142346.jpeg" alt="Vitalife - Endodoncia" style="object-position: center 20%;">
+                </div>
+                <div class="doctor-info" style="margin-top: 20px; text-align: left;">
+                    <span class="doctor-specialty">SALUD DENTAL INTERNA</span>
+                    <h3 class="doctor-name" style="font-size: 1.1rem; margin-top: 5px;">ENDODONCIA</h3>
+                    <p class="doctor-bio" style="font-size: 0.8rem; line-height: 1.5;">Tratamientos de conducto especializados para salvar tus piezas dentales naturales.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Implantes Dentales (Desliza desde la derecha) -->
+            <div class="team-card slide-from-right animate-on-scroll" style="transition-delay: 0.3s;">
+                <div class="doctor-image-wrapper standard-img-wrapper">
+                    <img src="https://i.ibb.co/1YS09yjQ/IMG-2936.jpg" alt="Vitalife - Implantes Dentales">
+                </div>
+                <div class="doctor-info" style="margin-top: 20px; text-align: left;">
+                    <span class="doctor-specialty">RESTAURACIÓN PREMIUM</span>
+                    <h3 class="doctor-name" style="font-size: 1.1rem; margin-top: 5px;">IMPLANTES DENTALES</h3>
+                    <p class="doctor-bio" style="font-size: 0.8rem; line-height: 1.5;">Reemplazo seguro de piezas perdidas mediante cirugía guiada digitalmente 3D.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Bioseguridad (Desliza desde la derecha) -->
+            <div class="team-card slide-from-right animate-on-scroll" style="transition-delay: 0.1s;">
+                <div class="doctor-image-wrapper standard-img-wrapper">
+                    <img src="https://i.ibb.co/C5ZgSJD9/IMG-3068.jpg" alt="Vitalife - Bioseguridad">
+                </div>
+                <div class="doctor-info" style="margin-top: 20px; text-align: left;">
+                    <span class="doctor-specialty">NORMAS DE ÉLITE</span>
+                    <h3 class="doctor-name" style="font-size: 1.1rem; margin-top: 5px;">BIOSEGURIDAD</h3>
+                    <p class="doctor-bio" style="font-size: 0.8rem; line-height: 1.5;">Protocolos internacionales de esterilización de instrumental e higiene clínica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios (Estilo Redes Sociales / Experiencias Reales) -->
+    <section class="testimonials-section" id="testimonios" style="border-top: 1px solid #111; padding: 100px 8% 80px 8%; position: relative; overflow: hidden;">
+        <!-- Video de Fondo Sincronizado -->
+        <div class="testimonials-video-bg-wrapper">
+            <video class="testimonials-video-bg" loop muted playsinline preload="auto">
+                <source src="video_testimonio.mp4" type="video/mp4">
+            </video>
+            <div class="testimonials-video-overlay"></div>
+        </div>
+
+        <!-- Capa de Transición de Pintura Blanca -->
+        <div class="paint-transition-overlay"></div>
+
+        <div class="testimonials-header" style="text-align: center; margin-bottom: 60px; position: relative; z-index: 10;">
+            <span class="section-tag-muted">TESTIMONIOS REALES</span>
+            <h2 class="services-title" style="margin-bottom: 20px;">HISTORIAS DE ÉXITO</h2>
+            <p class="services-main-paragraph" style="max-width: 700px; margin: 0 auto; text-align: center;">
+                FOTOS REALES DE NUESTROS PACIENTES Y SU EXPERIENCIA EN VITALIFE 360 DENTAL STUDIO.
+            </p>
+        </div>
+
+        <div class="testimonials-grid" style="position: relative; z-index: 10;">
+            <!-- Testimonio 1 -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="https://i.ibb.co/cSJL4Qm4/IMG-3065-2.jpg" alt="Testimonio Vitalife 360">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"La atención y la tecnología de Vitalife 360 hicieron que mi tratamiento fuera totalmente cómodo y sin dolor. ¡Una experiencia premium de verdad!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 1 semana</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="https://i.ibb.co/HfMDGvk9/IMG-2913.jpg" alt="Testimonio Vitalife 360">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"El diseño y la armonización de mi sonrisa superaron mis expectativas. Los especialistas explican cada paso con mucha paciencia."</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 3 semanas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="https://i.ibb.co/bgHXVWgy/IMG-2935.jpg" alt="Testimonio Vitalife 360">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Me realicé un diseño de sonrisa digital en Vitalife 360 y superó todas mis expectativas. El proceso fue rápido, indoloro y con tecnología avanzada. ¡Muy contento con mi nueva sonrisa!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 1 mes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 4 -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="https://i.ibb.co/LX4X24WQ/IMG-2934.jpg" alt="Testimonio Vitalife 360">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Me encantó el trato personalizado y las instalaciones. Usan tecnología de punta que no había visto en otro lado. ¡Feliz con mis resultados!"</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 2 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 5 -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="https://i.ibb.co/j96r3TFk/Captura-de-pantalla-2026-04-18-a-la-s-11-11-26-p-m.jpg" alt="Testimonio Vitalife 360">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"El blanqueamiento dental digital fue increíble, rápido y sin ninguna sensibilidad. Recomiendo Vitalife a todos mis conocidos."</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 3 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonio 6 (Último Testimonio) -->
+            <div class="testimonial-card">
+                <div class="testimonial-img-wrapper">
+                    <img src="ultimo_testimonio.png" alt="Testimonio Vitalife 360" style="object-position: center 65%;">
+                </div>
+                <div class="testimonial-content">
+                    <div class="testimonial-user">
+                        <div class="user-avatar">V</div>
+                        <div class="user-meta">
+                            <span class="user-name">Paciente Vitalife 360 DENTAL</span>
+                            <span class="user-handle">@vitalife360_paciente</span>
+                        </div>
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"La atención es excelente y los resultados son inmediatos. Recomiendo totalmente el Studio por su profesionalismo, calidez y tecnología."</p>
+                    <div class="testimonial-footer">
+                        <span class="testimonial-stars">★★★★★</span>
+                        <span class="testimonial-date">Hace 3 meses</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Ubicación (Diseño Bento de Lujo) -->
+    <section class="location-section" id="ubicacion" style="border-top: 1px solid #111;">
+        <div class="location-container">
+            <!-- Detalles de Ubicación (Lado Izquierdo) -->
+            <div class="location-details">
+                <span class="section-tag-muted animate-on-scroll">STUDIO DE ESPECIALIDADES • SANTO DOMINGO, ECUADOR</span>
+                <h2 class="services-title animate-on-scroll" style="margin-bottom: 20px;">NUESTRO STUDIO</h2>
+                <p class="services-main-paragraph animate-on-scroll" style="margin-bottom: 40px;">
+                    VISÍTANOS EN NUESTRAS EXCLUSIVAS INSTALACIONES DISEÑADAS PARA BRINDARTE LA MÁXIMA COMODIDAD, PRIVACIDAD Y TECNOLOGÍA DE PUNTA EN CADA CONSULTA.
+                </p>
+                
+                <div class="location-info-grid">
+                    <div class="info-item animate-on-scroll" style="transition-delay: 0.1s;">
+                        <span class="pillar-title">DIRECCIÓN</span>
+                        <p class="pillar-text">Av. Abraham Calazacón (pasando la Av. Chone), Santo Domingo de los Tsáchilas, Ecuador.</p>
+                    </div>
+                    <div class="info-item animate-on-scroll" style="transition-delay: 0.2s;">
+                        <span class="pillar-title">HORARIOS</span>
+                        <p class="pillar-text">Lunes a Viernes: 09:00 - 19:00<br>Sábados: 09:00 - 13:00</p>
+                    </div>
+                </div>
+
+                <div class="location-cta animate-on-scroll" style="transition-delay: 0.3s; margin-top: 40px;">
+                    <a href="https://maps.app.goo.gl/U357bED3842iA6cR7?g_st=iwb" target="_blank" rel="noopener" class="btn btn-outline">
+                        ABRIR EN GOOGLE MAPS
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mapa Interactivo Dark Mode (Lado Derecho) -->
+            <div class="location-map-wrapper animate-on-scroll" style="transition-delay: 0.2s;">
+                <div class="map-glow"></div>
+                <iframe 
+                    class="google-map-iframe"
+                    src="https://maps.google.com/maps?q=Vitalife360Dental,+Av.+Abraham+Calazacon,+pasando+y+Av.+Chone,+230103+Santo+Domingo&t=h&z=17&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Galería Bento del Consultorio (Lujo Dental Studio - Estructura parecida a Nuestro Equipo) -->
+        <div class="studio-grid animate-on-scroll" style="transition-delay: 0.1s;">
+            <!-- Card 1: Elegancia -->
+            <div class="studio-card">
+                <div class="studio-img-wrapper">
+                    <img src="https://i.ibb.co/ksrX3g5T/IMG-2821.jpg" alt="Vitalife 360 Dental Studio - Elegancia">
+                </div>
+                <div class="studio-info" style="margin-top: 20px; text-align: left;">
+                    <span style="font-size: 0.7rem; color: #D7C19B; letter-spacing: 1px; font-weight: 500;">INSTALACIONES</span>
+                    <h3 style="font-size: 1.05rem; margin-top: 5px; color: #fff; font-weight: 600;">ELEGANCIA</h3>
+                    <p style="font-size: 0.8rem; line-height: 1.5; color: #888; margin-top: 8px;">Espacio exclusivo de diseño minimalista, concebido para brindar serenidad y distinción desde tu llegada.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Sala Quirúrgica -->
+            <div class="studio-card">
+                <div class="studio-img-wrapper">
+                    <img src="https://i.ibb.co/7tDwYrHg/IMG-2864.jpg" alt="Vitalife 360 Dental Studio - Sala Quirúrgica">
+                </div>
+                <div class="studio-info" style="margin-top: 20px; text-align: left;">
+                    <span style="font-size: 0.7rem; color: #D7C19B; letter-spacing: 1px; font-weight: 500;">TECNOLOGÍA CLÍNICA</span>
+                    <h3 style="font-size: 1.05rem; margin-top: 5px; color: #fff; font-weight: 600;">ÁREA CLÍNICA</h3>
+                    <p style="font-size: 0.8rem; line-height: 1.5; color: #888; margin-top: 8px;">Gabinetes equipados con tecnología de vanguardia para procesos seguros.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Tecnología -->
+            <div class="studio-card">
+                <div class="studio-img-wrapper">
+                    <img src="IMG_6952.jpg" alt="Vitalife 360 Dental Studio - Tecnología">
+                </div>
+                <div class="studio-info" style="margin-top: 20px; text-align: left;">
+                    <span style="font-size: 0.7rem; color: #D7C19B; letter-spacing: 1px; font-weight: 500;">DIAGNÓSTICO 3D</span>
+                    <h3 style="font-size: 1.05rem; margin-top: 5px; color: #fff; font-weight: 600;">TECNOLOGÍA 3D</h3>
+                    <p style="font-size: 0.8rem; line-height: 1.5; color: #888; margin-top: 8px;">Sistemas digitales avanzados para diagnósticos milimétricos y rápidos.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Consultas -->
+            <div class="studio-card">
+                <div class="studio-img-wrapper">
+                    <img src="https://i.ibb.co/n8ngYpvF/IMG-2812.jpg" alt="Vitalife 360 Dental Studio - Consultorios">
+                </div>
+                <div class="studio-info" style="margin-top: 20px; text-align: left;">
+                    <span style="font-size: 0.7rem; color: #D7C19B; letter-spacing: 1px; font-weight: 500;">ATENCIÓN PERSONALIZADA</span>
+                    <h3 style="font-size: 1.05rem; margin-top: 5px; color: #fff; font-weight: 600;">CONSULTORIOS</h3>
+                    <p style="font-size: 0.8rem; line-height: 1.5; color: #888; margin-top: 8px;">Espacios privados diseñados para planificar tu tratamiento con tranquilidad.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: Confort -->
+            <div class="studio-card">
+                <div class="studio-img-wrapper">
+                    <img src="https://i.ibb.co/8nvMk39K/IMG-2911.jpg" alt="Vitalife 360 Dental Studio - Confort">
+                </div>
+                <div class="studio-info" style="margin-top: 20px; text-align: left;">
+                    <span style="font-size: 0.7rem; color: #D7C19B; letter-spacing: 1px; font-weight: 500;">ESTILO VITALIFE</span>
+                    <h3 style="font-size: 1.05rem; margin-top: 5px; color: #fff; font-weight: 600;">ZONA DE ESPERA</h3>
+                    <p style="font-size: 0.8rem; line-height: 1.5; color: #888; margin-top: 8px;">Detalles pensados para hacer de tu visita una experiencia placentera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 oenvia. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Filtro SVG para simular el comportamiento de gota líquida de pintura (Gooey Filter) -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none;">
+        <defs>
+            <filter id="liquid-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Overlay de Agenda con animación de Gota de Pintura Blanca -->
+    <div id="agenda-overlay" class="agenda-overlay">
+        <div class="droplet-container">
+            <svg class="droplet-svg" viewBox="0 0 284 230" preserveAspectRatio="none">
+                <!-- Silueta de muela que se expande por transformación CSS -->
+                <path id="droplet-tooth" d="M 115,30 C 130,30 140,33 150,33 C 160,33 170,30 185,30 C 205,30 210,50 210,75 C 210,95 195,115 190,145 C 185,160 190,180 180,200 C 175,207 168,207 165,200 C 158,185 158,150 150,145 C 145,140 140,140 135,145 C 127,150 127,185 120,200 C 117,207 110,207 105,200 C 95,180 100,160 95,145 C 90,115 75,95 75,75 C 75,50 80,30 100,30 Z" fill="#ffffff" style="transform-origin: 142px 115px; transform: scale(0);" />
+            </svg>
+        </div>
+        
+        <!-- Marca de agua tenue con el logotipo de la clínica -->
+        <div class="agenda-watermark"></div>
+        <div class="agenda-content">
+            <button class="close-overlay-btn" id="close-agenda">&times;</button>
+            <div class="agenda-inner">
+                <span class="agenda-subtitle">VITALIFE 360 DENTAL STUDIO</span>
+                <h2 class="agenda-title">AGENDA TU CITA</h2>
+                <p class="agenda-desc">COMUNÍCATE DIRECTAMENTE CON NUESTROS ESPECIALISTAS Y COORDINA TU CONSULTA DE FORMA INMEDIATA VÍA WHATSAPP.</p>
+                
+                <!-- Enlace de WhatsApp temporal a ser completado por el usuario -->
+                <a href="https://wa.me/593983906801" target="_blank" rel="noopener" class="whatsapp-booking-btn" id="whatsapp-booking-link">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.528 2.008 14.068.99 11.452.99 6.01.99 1.587 5.363 1.583 10.795c-.001 1.63.456 3.22 1.325 4.646L1.87 21.78l6.577-1.715.2-.095z" />
+                    </svg>
+                    CHATEAR POR WHATSAPP
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

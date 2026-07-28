@@ -1,0 +1,5 @@
+*.zip
+*.mov
+.DS_Store
+temp_content.md
+form_data.json

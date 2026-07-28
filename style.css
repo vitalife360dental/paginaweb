@@ -1,0 +1,1590 @@
+/* oenvia - Premium Dental Clinic Styling */
+
+:root {
+    --bg-color: #000000;
+    --bg-card: #080808;
+    --text-primary: #ffffff;
+    --text-muted: #888888;
+    --accent-teal: #00b3b3; /* Vibrant teal glow color */
+    --accent-teal-transparent: rgba(0, 179, 179, 0.4);
+    --font-main: 'Outfit', sans-serif;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    font-family: var(--font-main);
+    color: var(--text-primary);
+}
+
+body {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Header / Navbar */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    backdrop-filter: blur(8px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.logo-img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+    margin: -60px 0; /* Compensates for the large transparent/whitespace padding around the logo content */
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color var(--transition-speed) ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+    border-radius: 0; /* Strict square corners as in reference */
+}
+
+.btn-outline {
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 24px;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+}
+
+.btn-solid {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    padding: 18px 30px;
+    border: none;
+}
+
+.btn-solid:hover {
+    background-color: transparent;
+    color: var(--text-primary);
+    outline: 1px solid var(--text-primary);
+}
+
+.arrow-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform var(--transition-speed) ease;
+}
+
+.btn:hover .arrow-icon {
+    transform: translate(2px, -2px);
+}
+
+/* Hero Container */
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+/* Glow Background - Fixed behind the video while scrolling */
+.glow-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 75vw;
+    max-width: 900px;
+    max-height: 900px;
+    background: radial-gradient(circle, var(--accent-teal-transparent) 0%, rgba(0,0,0,0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Video Base Layer - Fixed & Centered behind Text, scaling up during scroll */
+.video-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 1100px;
+    height: 80vh;
+    max-height: 900px;
+    z-index: 3; /* Rendered behind the text layers but in front of body background */
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooth-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: screen; /* Blends video black with body black background */
+    filter: brightness(1.05) contrast(1.02);
+    opacity: 0.95;
+}
+
+/* Hero Content Layer - Sits on top of the fixed elements */
+.hero-content {
+    position: relative;
+    z-index: 5; /* Sits on top of video container */
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 140px 8% 80px 8%;
+    gap: 40px;
+    pointer-events: none; /* Allows clicks to pass through to buttons under structural wrappers */
+}
+
+/* Columns */
+.hero-left, .hero-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    pointer-events: auto; /* Restores mouse events for content/buttons */
+}
+
+/* Left Column Content */
+.hero-left {
+    align-items: flex-start;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-number {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #D7C19B; /* Dorado Champagne */
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.hero-desc-left {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    max-width: 320px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+}
+
+/* Right Column Content */
+.hero-right {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.hero-desc-right-container {
+    max-width: 320px;
+    margin-top: 40px;
+}
+
+.hero-desc-right {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+.explore-btn-container {
+    margin: 40px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-title-right {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    margin-top: auto;
+    text-transform: uppercase;
+}
+
+/* Animations */
+.animate-fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Segundo Bloque - Sección de Servicios (Diseño de Sonrisa Editorial) */
+.services-section {
+    position: relative;
+    z-index: 4; /* Sits in front of video container so text is on top */
+    background-color: transparent; /* Fondo transparente para dejar ver el video que está detrás */
+    padding: 120px 8%;
+    border-top: 1px solid #111;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.services-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr; /* Lado izquierdo libre para la muela, derecho para el texto */
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 10; /* Ensures all text is stacked on top of background media layers */
+}
+
+.services-container-swapped {
+    grid-template-columns: 1.3fr 1fr !important; /* Texto a la izquierda, espacio a la derecha */
+}
+
+/* Ancla para recibir a la muela */
+.services-left-anchor {
+    min-height: 450px;
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ancla derecha para el tercer bloque */
+.services-right-anchor {
+    min-height: 450px;
+    width: 100%;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenido de Servicios (Tipografías idénticas al bloque 1) */
+.services-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.section-tag-muted {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.services-title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    color: var(--text-primary);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.services-main-paragraph {
+    font-size: 0.95rem;
+    color: #ffffff; /* Brighter white for better pop */
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    max-width: 650px;
+    margin-bottom: 45px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Pilares Editoriales sin tarjetas */
+.editorial-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.pillar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pillar-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #D7C19B; /* Dorado Champagne */
+    text-transform: uppercase;
+}
+
+.pillar-text {
+    font-size: 0.82rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.editorial-cta {
+    margin-top: 10px;
+}
+
+/* Animation on Scroll classes */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+.footer {
+    padding: 30px 8%;
+    background-color: #050505;
+    border-top: 1px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.footer p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* Second Section Video Entrance & Zoom (Absolute background positioning) */
+.second-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Below the container (z-index 5) so it passes under the text */
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    /* Mask to fade out video on the right (text area) to keep it clean and readable */
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 42%, rgba(0,0,0,0) 80%);
+}
+
+.second-tooth-video {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px; /* Enormous scale to act as background */
+    max-height: 950px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: brightness(0.42) contrast(1.1); /* Dimmed brightness of white droplets so text is completely readable */
+}
+/* Third Section Video Entrance & Zoom (Absolute background positioning) */
+.third-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Below the container so it passes under the text */
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    /* Mask to fade out video on the left (text area) to keep it clean and readable */
+    mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+}
+
+.third-tooth-video {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 950px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: brightness(0.42) contrast(1.1);
+}
+/* Fourth Section Video Entrance & Zoom (Absolute background positioning) */
+.fourth-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Below the container so it passes under the text */
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.fourth-tooth-image {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 950px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: brightness(0.95) contrast(1.05); /* Increased brightness so the beautiful texture is visible behind the text */
+}
+
+/* Fifth Section Video Entrance & Zoom (Absolute background positioning) */
+.fifth-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Below the container so it passes under the text */
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    /* Mask to fade out video on the left (text area) to keep it clean and readable */
+    mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 80%);
+}
+
+.fifth-tooth-video {
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    max-height: 950px;
+    object-fit: contain;
+    mix-blend-mode: screen;
+    filter: brightness(0.42) contrast(1.1);
+}
+
+/* Interactive Dental Surgery SVG Styling */
+.interactive-surgery-svg-wrapper {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+}
+
+.interactive-surgery-svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Interactive Dental Implant SVG Styling */
+.interactive-implant-svg-wrapper {
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+}
+
+.interactive-implant-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 8px 16px rgba(0, 179, 179, 0.15));
+}
+
+.implant-part {
+    transition: transform 0.05s ease-out; /* Super smooth scroll tracking */
+}
+
+/* Interactive Orthodontics SVG Styling */
+.interactive-ortho-svg-wrapper {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+}
+
+.interactive-ortho-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 20px rgba(0, 179, 179, 0.12));
+}
+
+.ortho-part {
+    transition: transform 0.05s ease-out;
+}
+
+#ortho-tooth-left {
+    transform-origin: 80px 110px;
+}
+
+#ortho-tooth-center {
+    transform-origin: 150px 110px;
+}
+
+#ortho-tooth-right {
+    transform-origin: 220px 110px;
+}
+
+/* Interactive Smile Design SVG Styling */
+.interactive-smile-svg-wrapper {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 15;
+}
+
+.interactive-smile-svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 10px 25px rgba(0, 179, 179, 0.12));
+}
+
+.smile-part {
+    transition: transform 0.05s ease-out, opacity 0.05s ease-out;
+}
+
+/* Team Section Styling */
+.team-section {
+    background-color: #000;
+    padding: 120px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-header {
+    text-align: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.team-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.team-card {
+    background: rgba(10, 10, 10, 0.4);
+    border: 1px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 30px 25px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-teal);
+    box-shadow: 0 15px 35px rgba(0, 179, 179, 0.08);
+}
+
+.featured-img-wrapper {
+    width: 100%;
+    height: 480px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    overflow: hidden;
+    background-color: #050505;
+}
+
+.featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9) contrast(1.05);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.standard-img-wrapper {
+    border-radius: 12px;
+    width: 100%;
+    height: 220px;
+    border: 1px solid #222;
+    overflow: hidden;
+    background-color: #050505;
+}
+
+.standard-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) contrast(1.1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+.doctor-specialty {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #D7C19B; /* Champagne Gold */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.doctor-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.doctor-bio {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+/* Location Section Styling */
+.location-section {
+    background-color: #000;
+    padding: 120px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.location-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.location-map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #222;
+    background-color: #050505;
+}
+
+.map-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(0, 179, 179, 0.08) 0%, rgba(0,0,0,0) 70%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Google Map Satellite Hybrid Styling */
+.google-map-iframe {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    filter: contrast(1.1) brightness(0.9);
+    z-index: 1;
+    position: relative;
+}
+
+/* Bento Studio Gallery Styling (Grid Layout matching Nuestro Equipo style and dimensions) */
+.studio-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 60px;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.studio-card {
+    background: rgba(17, 17, 17, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 16px;
+    transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.studio-card:hover {
+    border-color: var(--accent-teal);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 179, 179, 0.08);
+}
+
+.studio-img-wrapper {
+    width: 100%;
+    height: 200px; /* Misma altura de imagen estandarizada de las tarjetas de equipo */
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.studio-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorte inteligente para mantener proporciones sin deformar */
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    filter: brightness(0.85) contrast(1.1);
+}
+
+.studio-card:hover .studio-img-wrapper img {
+    transform: scale(1.05);
+    filter: brightness(0.95) contrast(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-overlay span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--accent-teal);
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .services-container, .services-container-swapped {
+        grid-template-columns: 1fr !important;
+        gap: 40px;
+    }
+    
+    .services-left-anchor, .services-right-anchor {
+        display: none;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+        gap: 60px;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .hero-container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .hero-left, .hero-right {
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+        height: auto;
+    }
+
+    .hero-desc-left, .hero-desc-right-container {
+        max-width: 480px;
+        margin-top: 0;
+    }
+
+    .explore-btn-container {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .hero-title-right {
+        font-size: 2.8rem;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .video-container {
+        width: 90vw;
+        height: 50vh;
+        opacity: 0.75;
+    }
+    
+    .stats-grid {
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .services-section {
+        padding: 80px 5%;
+    }
+
+    .editorial-pillars {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .location-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .location-map-wrapper {
+        height: 350px;
+    }
+
+    .studio-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero-content {
+        padding: 100px 5% 40px 5%;
+    }
+
+    .stats-grid {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .hero-title-right {
+        font-size: 2.2rem;
+    }
+
+    .services-title {
+        font-size: 2.8rem;
+    }
+
+    .studio-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .team-section {
+        padding: 80px 5%;
+    }
+
+    .standard-img-wrapper {
+        height: 260px;
+    }
+}
+
+/* Agenda Overlay & Liquid Paint Droplet Animation */
+.agenda-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Let clicks pass through when hidden */
+    visibility: hidden;
+    transition: visibility 0.6s;
+}
+
+.agenda-overlay.active {
+    pointer-events: auto;
+    visibility: visible;
+}
+
+/* Container with the liquid goo filter applied */
+.droplet-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#liquid-goo);
+    background-color: transparent;
+    z-index: 1;
+}
+
+.droplet-svg {
+    width: 100%;
+    height: 100%;
+}
+
+#droplet-tooth {
+    transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.agenda-overlay.active #droplet-tooth {
+    transform: scale(28) !important; /* Expands the tooth to cover the viewport */
+}
+
+/* Agenda Content (Fades in over the white paint) */
+.agenda-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+    width: 90%;
+    padding: 50px 40px;
+    background: transparent;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s;
+    color: #000; /* Dark text since background becomes white paint! */
+}
+
+.agenda-overlay.active .agenda-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Close button style */
+.close-overlay-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #000;
+    opacity: 0.7;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.close-overlay-btn:hover {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* Inner elements */
+.agenda-subtitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #555;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.agenda-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.agenda-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* WhatsApp luxury button */
+.whatsapp-booking-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background-color: #25d366; /* Official WhatsApp Green */
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.whatsapp-booking-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+    background-color: #20ba5a;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Marca de agua tenue con el logo de la clínica en el fondo del modal */
+.agenda-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.ibb.co/F4DwWnfN/imagen-logo-en-panel-real.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    filter: grayscale(100%) brightness(1.05) contrast(1.0);
+    transition: opacity 1s ease 0.4s;
+}
+
+.agenda-overlay.active .agenda-watermark {
+    opacity: 0.18; /* Más visible como marca de agua en fondo blanco */
+}
+
+/* Video de Fondo para la sección de Nuestro Equipo */
+.team-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1; /* Por debajo del texto y tarjetas */
+    pointer-events: none;
+}
+
+.team-bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    opacity: 0.95; /* Súper brillante y al frente como solicitó el usuario */
+}
+
+.team-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Degradado lineal sutil solo en los bordes superior/inferior para fundir con el negro absoluto de la página */
+    background: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0) 15%, rgba(0,0,0,0) 85%, #000 100%);
+    z-index: 2;
+}
+
+/* El contenido y la grilla se posicionan por encima del video */
+.team-header, .team-grid {
+    position: relative;
+    z-index: 5;
+}
+
+/* Sacudón de la sección en la colisión de la pintura */
+@keyframes shockwaveShake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-6px, -6px) rotate(-1deg); }
+    20% { transform: translate(6px, 6px) rotate(1deg); }
+    30% { transform: translate(-8px, 8px) rotate(-1.5deg); }
+    40% { transform: translate(8px, -8px) rotate(1.5deg); }
+    50% { transform: translate(-6px, 6px) rotate(-1deg); }
+    60% { transform: translate(6px, -6px) rotate(1deg); }
+    70% { transform: translate(-3px, -3px) rotate(-0.5deg); }
+    80% { transform: translate(3px, 3px) rotate(0.5deg); }
+    90% { transform: translate(-1px, 1px) rotate(-0.2deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.team-section.shockwave-shake {
+    animation: shockwaveShake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Transiciones de entrada de Nuestro Equipo (Onda Expansiva de Dos Fases) */
+.team-section .team-card.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- FASE 1: Las tarjetas entran desde los extremos y se conjuntan en el centro (opacidad media) --- */
+.team-section .team-card.slide-from-left.animate-on-scroll {
+    transform: translateX(-150%) scale(0.7);
+}
+.team-section .team-card.slide-from-right.animate-on-scroll {
+    transform: translateX(150%) scale(0.7);
+}
+.team-section .team-card.fade-in-center.animate-on-scroll {
+    transform: scale(0);
+}
+
+/* Al ser visible la sección, se deslizan y esperan juntas en el centro */
+.team-section.visible .team-grid > div:nth-child(1).animate-on-scroll {
+    transform: translateX(200px) scale(0.75);
+    opacity: 0.35;
+}
+.team-section.visible .team-grid > div:nth-child(2).animate-on-scroll {
+    transform: translateX(100px) scale(0.85);
+    opacity: 0.45;
+}
+.team-section.visible .team-grid > div:nth-child(3).animate-on-scroll {
+    transform: scale(0.5);
+    opacity: 0.25;
+}
+.team-section.visible .team-grid > div:nth-child(4).animate-on-scroll {
+    transform: translateX(-100px) scale(0.85);
+    opacity: 0.45;
+}
+.team-section.visible .team-grid > div:nth-child(5).animate-on-scroll {
+    transform: translateX(-200px) scale(0.75);
+    opacity: 0.35;
+}
+
+/* --- FASE 2: Sacudón BOOM y dispersión elástica hacia sus columnas finales --- */
+.team-section .team-grid.reveal-cards .team-card.animate-on-scroll {
+    opacity: 1 !important;
+    transform: translateX(0) scale(1) !important;
+    /* Cambio a curva elástica con duración suavizada a 0.55s */
+    transition: opacity 0.55s cubic-bezier(0.34, 1.56, 0.64, 1), transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* Delays específicos de salida suavizados */
+.team-section .team-grid.reveal-cards > div:nth-child(3) {
+    transition-delay: 0s !important;
+}
+.team-section .team-grid.reveal-cards > div:nth-child(2),
+.team-section .team-grid.reveal-cards > div:nth-child(4) {
+    transition-delay: 0.08s !important;
+}
+.team-section .team-grid.reveal-cards > div:nth-child(1),
+.team-section .team-grid.reveal-cards > div:nth-child(5) {
+    transition-delay: 0.15s !important;
+}
+
+/* ==========================================
+   SECCIÓN TESTIMONIOS (Premium Social Look)
+   ========================================== */
+.testimonials-section {
+    background-color: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Contenedor del video de fondo de testimonios */
+.testimonials-video-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.testimonials-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95; /* El video inicia súper brillante y claro */
+    object-position: center 40%; /* Ajustado para enfocar mejor la acción de los guantes y el pincel */
+    transition: opacity 1.5s ease, filter 1.5s ease;
+}
+
+.testimonials-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente inicial muy sutil para que se vea claro el video */
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+    transition: background 1.5s ease;
+}
+
+/* Efecto de transición: Mancha/destello de pintura blanca */
+.paint-transition-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(0, 179, 179, 0.1) 40%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    z-index: 3;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    transition: transform 0.7s cubic-bezier(0.1, 0.8, 0.2, 1), opacity 0.4s ease; /* Suavizada a 0.7s y 0.4s */
+}
+
+.testimonials-section.paint-flash .paint-transition-overlay {
+    transform: translate(-50%, -50%) scale(4.8); /* Reducido de scale(6) a scale(4.8) para suavizar el zoom de la transición */
+    opacity: 0.9;
+}
+
+/* Estado del video y overlay tras la transición (cuando aparecen las tarjetas) */
+.testimonials-section.reveal-active .testimonials-video-bg {
+    filter: blur(6px) brightness(0.25); /* Desenfoque elegante y oscurecimiento solo al revelar tarjetas */
+    opacity: 0.35;
+}
+
+.testimonials-section.reveal-active .testimonials-video-overlay {
+    background: rgba(0, 0, 0, 0.8); /* La capa se oscurece al final para máxima legibilidad del texto */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Tarjeta Glassmorphism de Lujo */
+.testimonial-card {
+    background: rgba(10, 10, 10, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(60px) scale(0.9);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease; /* Suavizada de 0.3s a 0.5s */
+    pointer-events: none;
+}
+
+.testimonials-section.reveal-active .testimonial-card {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(1) {
+    transition-delay: 0.02s; /* Ajustado */
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(2) {
+    transition-delay: 0.08s; /* Ajustado */
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(3) {
+    transition-delay: 0.15s; /* Ajustado */
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(4) {
+    transition-delay: 0.22s;
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(5) {
+    transition-delay: 0.29s;
+}
+
+.testimonials-section.reveal-active .testimonial-card:nth-child(6) {
+    transition-delay: 0.36s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--accent-teal);
+    box-shadow: 0 20px 50px rgba(0, 179, 179, 0.15);
+}
+
+.testimonial-img-wrapper {
+    width: 100%;
+    height: 300px; /* Aumentado de 250px a 300px para evitar recortes severos */
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.testimonial-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center; /* Restablecido a centrado por defecto */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.9) contrast(1.05);
+}
+
+.testimonial-card:hover .testimonial-img-wrapper img {
+    transform: scale(1.05);
+    filter: brightness(1.0) contrast(1.05);
+}
+
+.testimonial-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.testimonial-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-teal), #006666);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.user-handle {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 1px;
+}
+
+.social-icon {
+    color: var(--accent-teal);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-card:hover .social-icon {
+    opacity: 1;
+}
+
+.testimonial-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #b3b3b3;
+    margin-bottom: 20px;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonial-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding-top: 15px;
+}
+
+.testimonial-stars {
+    color: #D7C19B; /* Elegant gold stars */
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-date {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+/* Iconos de servicio micro SVG junto a los subtítulos */
+.micro-svg-service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px; /* Altura ideal alineada al tamaño de la tipografía */
+    width: auto;
+    flex-shrink: 0;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.micro-svg-service-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.micro-svg-service-icon svg {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* Márgenes de compensación negativos para acercarlos más al texto como en ortodoncia */
+.micro-svg-service-icon.smile-icon,
+.micro-svg-service-icon.surgery-icon {
+    margin-left: -10px;
+}
+
+.micro-svg-service-icon.implant-icon {
+    margin-left: -16px;
+}
