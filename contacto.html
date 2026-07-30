@@ -413,6 +413,15 @@
             }
         }
 
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1350px;
+            margin: 0 auto;
+        }
+
         /* --- Botón Página WEB de Navegación --- */
         .btn-nav-back {
             display: inline-block;
@@ -497,6 +506,9 @@
             }
             .header-container {
                 padding: 10px 15px !important;
+            }
+            .header-container .nav {
+                display: flex !important; /* Forzar que aparezca el botón a pesar del style.css */
             }
             .btn-nav-back {
                 padding: 8px 16px;
