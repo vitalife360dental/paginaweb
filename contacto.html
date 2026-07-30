@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css?v=64">
     <!-- Three.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     
     <style>
         .contact-page-body {
@@ -769,10 +769,10 @@
         const textureLoader = new THREE.TextureLoader();
         const baseDir = 'logo-muela/';
         
-        const mapDiffuse = textureLoader.load(baseDir + 'texture_diffuse.png');
-        const mapNormal = textureLoader.load(baseDir + 'texture_normal.png');
-        const mapMetallic = textureLoader.load(baseDir + 'texture_metallic.png');
-        const mapRoughness = textureLoader.load(baseDir + 'texture_roughness.png');
+        const mapDiffuse = textureLoader.load(baseDir + 'texture_diffuse.jpg');
+        const mapNormal = textureLoader.load(baseDir + 'texture_normal.jpg');
+        const mapMetallic = textureLoader.load(baseDir + 'texture_metallic.jpg');
+        const mapRoughness = textureLoader.load(baseDir + 'texture_roughness.jpg');
 
         // Material físico premium usando los mapas de textura
         const logoMaterial = new THREE.MeshPhysicalMaterial({
@@ -787,9 +787,10 @@
             normalScale: new THREE.Vector2(1.5, 1.5)
         });
 
-        // Carga de la geometría base.obj
-        const objLoader = new THREE.OBJLoader();
-        objLoader.load(baseDir + 'base.obj', (obj) => {
+        // Carga de la geometría base.glb
+        const gltfLoader = new THREE.GLTFLoader();
+        gltfLoader.load(baseDir + 'base.glb', (gltf) => {
+            const obj = gltf.scene;
             obj.traverse((child) => {
                 if (child.isMesh) {
                     child.material = logoMaterial;
