@@ -664,6 +664,12 @@
                     <input type="text" id="cedula" name="cedula" placeholder="Ej. 1724276496" required>
                 </div>
 
+                <!-- Campo: Fecha de Nacimiento -->
+                <div class="form-field" style="margin-bottom: 22px;">
+                    <label for="dob">Fecha de Nacimiento</label>
+                    <input type="date" id="dob" name="dob" required style="color-scheme: dark; color: #fff;">
+                </div>
+
                 <!-- Campo dinámico para especificar otro tratamiento (oculto por defecto) -->
                 <div class="form-field" id="other-treatment-container" style="display: none; margin-top: -5px; margin-bottom: 22px;">
                     <label for="other-treatment">Especifica el tratamiento o motivo de consulta</label>
@@ -694,6 +700,7 @@
         <input type="hidden" name="entry.1737406584" id="gf-phone">
         <input type="hidden" name="entry.1009305705" id="gf-email">
         <input type="hidden" name="entry.411261557" id="gf-cedula">
+        <input type="hidden" name="entry.811190230" id="gf-dob">
     </form>
 
     <!-- Puente de Sugerencias -->
@@ -943,6 +950,16 @@
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
             const cedula = document.getElementById('cedula').value;
+            const dob = document.getElementById('dob').value;
+            
+            // Convertir fecha de YYYY-MM-DD a formato DD/MM/YYYY para Google Forms y WhatsApp
+            let formattedDob = dob;
+            if (dob) {
+                const parts = dob.split('-');
+                if (parts.length === 3) {
+                    formattedDob = `${parts[2]}/${parts[1]}/${parts[0]}`;
+                }
+            }
             
             let selectedTreatment = treatmentSelect.options[treatmentSelect.selectedIndex].text;
             if (treatmentSelect.value === 'otro') {
@@ -956,10 +973,11 @@
             document.getElementById('gf-phone').value = phone;
             document.getElementById('gf-email').value = email;
             document.getElementById('gf-cedula').value = cedula;
+            document.getElementById('gf-dob').value = formattedDob;
             document.getElementById('google-citas-bridge').submit();
 
-            // Redirigir inmediatamente a WhatsApp (incluye número de cédula)
-            const text = `Hola Vitalife 360, deseo agendar una valoración odontológica:\n\n*Nombre:* ${name}\n*Cédula:* ${cedula}\n*Teléfono:* ${phone}\n*Correo:* ${email}\n*Tratamiento:* ${selectedTreatment}\n*Mensaje:* ${msg}`;
+            // Redirigir inmediatamente a WhatsApp (incluye número de cédula y fecha de nacimiento)
+            const text = `Hola Vitalife 360, deseo agendar una valoración odontológica:\n\n*Nombre:* ${name}\n*Cédula:* ${cedula}\n*Fecha de Nacimiento:* ${formattedDob}\n*Teléfono:* ${phone}\n*Correo:* ${email}\n*Tratamiento:* ${selectedTreatment}\n*Mensaje:* ${msg}`;
             const encodedText = encodeURIComponent(text);
             window.open(`https://wa.me/593983906801?text=${encodedText}`, '_blank');
         });
